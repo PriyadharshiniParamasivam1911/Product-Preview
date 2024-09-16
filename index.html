@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+	
+	<title>Frontend Mentor | Product preview card component</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+	<style>
+	  /* By default */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* My styles */
+
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    /* Primary colors */
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+
+    /* Neutral colors */
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Typography size */
+    --size-paragraph: 14px;
+
+    /* Main typography */
+    --montserrat: 'Montserrat', sans-serif;
+
+    /* title typography */
+    --fraunces: 'Fraunces', serif;
+
+}
+
+
+main {
+    background-color: var(--cream);
+    height: 100vh;
+    width: 100vw;
+}
+
+.main__content {
+    display: block;
+}
+
+.card {
+    display: flex;
+    height: 97vh;
+    justify-content: center;
+    align-items: center;
+} 
+
+.footer {
+    height: 3vh;
+}
+
+.card__image {
+    height: 510px;
+    width: 310px;
+}
+
+.card__description {
+    height: 440px;
+    width: 240px;
+    background-color: var(--white);
+    border-radius: 0 10px 10px 0;
+    padding: 35px;
+}
+
+.card__image--perfume {
+    height: 510px;
+    width: 310px;
+    border-radius: 10px 0 0 10px;
+    filter: brightness(80%);
+    filter: saturate(100%);
+}
+
+.card__description--product {
+    font-family: var(--montserrat);
+    font-weight: 500;
+    letter-spacing: 4px;
+    color: var(--dark-grayish-blue);
+    font-size: 12px;
+    margin: 0;
+}
+
+.card__description--title {
+    font-family: var(--fraunces);
+    font-weight: 700;
+    font-size: 40px;
+    margin: 10px 0px;
+}
+
+.card__description--details {
+    font-family: var(--montserrat);
+    /* font-weight: 500; */
+    font-size: var(--size-paragraph);
+    color: var(--dark-grayish-blue);
+    line-height: 1.7;
+    margin: 15px 0px;
+}
+
+.card__description--price {
+    display: flex;
+    align-items: center;
+}
+
+.price--actual {
+    font-family: var(--fraunces);
+    font-weight: 700;
+    color: var(--dark-cyan);
+    margin-right: 20px;
+    font-size: 35px;
+    margin: 0 20px 0 0;
+}
+
+.price--before {
+    font-size: var(--size-paragraph);
+    color: var(--dark-grayish-blue);
+    font-family: var(--montserrat);
+    font-weight: normal;
+}
+
+button {
+    border-color: transparent;
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    font-family: var(--montserrat);
+    padding: 12px;
+    width: 100%;
+    border-radius: 7px;
+    margin: 25px 0px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--very-dark-blue);
+}
+
+svg {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+.attribution {
+    font-family: var(--montserrat);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+@media (min-width: 375px) and (max-width: 639px) {
+    main {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .main__content {
+        height: 93vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+    }
+
+
+    .card {
+        display: block;
+        height: 620px;
+        width: 336px;
+        margin: auto;
+    } 
+
+    .card__image {
+        height: 270px;
+        width: 336px;
+    }
+
+    .card__image--perfume {
+        height: 270px;
+        width: 336px;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .card__description {
+        height: 350px;
+        width: 300px;
+        margin: 0;
+        padding: 18px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .card__description--title {
+        font-size: 30px;
+    } 
+
+    button {
+        margin: 15px 0px;
+    }
+
+    .attribution {
+        margin: 10px 0;
+        padding: 20px 0 10px 0;
+    }
+}
+
+
+@media (max-width: 375px) {
+    main {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .main__content {
+        height: 93vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .card {
+        display: block;
+        height: 620px;
+        width: 250px;
+        margin: auto;
+    } 
+
+    .card__image {
+        height: 180px;
+        width: 250px;
+    }
+
+    .card__image--perfume {
+        height: 180px;
+        width: 250px;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .card__description {
+        height: 350px;
+        width: 214px;
+        margin: 0;
+        padding: 18px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .card__description--title {
+        font-size: 25px;
+    } 
+
+    button {
+        margin: 0;
+    }
+
+    .attribution {
+        margin: 10px 0;
+    }
+}
+	</style>
+</head>
+<body>
+	<main>
+		<section class="main__content">
+			<div class="card">
+				<div class="card__image">
+					<img class="card__image--perfume" src="./images/image-product-desktop.jpg" alt="Perfume image">
+				</div>
+
+				<div class="card__description">
+					<h3 class="card__description--product">PERFUME</h3>
+					<h2 class="card__description--title">Gabrielle Essence Eau De Parfum</h2>
+					<p class="card__description--details">A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
+					
+					<div class="card__description--price">
+						<h1 class="price--actual">$149.99</h1>
+						<h5 class="price--before"><s>$169.99</s></h5>
+					</div>
+					
+					<button type="submit"><svg width="15" height="16" xmlns="http://www.w3.org/2000/svg" class="add--btn"><path d="M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z" fill="#FFF"/></svg> Add to Cart</button>
+
+				</div>
+			</div>
+		</section>
+
+		<section class="footer">
+			<div class="attribution">
+				Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+				Coded by <a href="#">Francina Dippiton</a>.
+			</div>
+		</section>
+	</main>
+</body>
+</html>
